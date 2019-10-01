@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "fad26f9b-ee86-4d30-bd68-e97de1608e39",
+		"name": "Formazione Jboss",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deploy Staandalone",
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "httpadmin",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "MD5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Tinvention/git/Training-Servlet4/Servlet4HelloWorld/target/Servlet4HelloWorld-0.1-SNAPSHOT.war"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9990/management/add-content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9990",
+					"path": [
+						"management",
+						"add-content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload War Standalone",
+			"request": {
+				"auth": {
+					"type": "digest",
+					"digest": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "httpadmin",
+							"type": "string"
+						},
+						{
+							"key": "algorithm",
+							"value": "MD5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": null,
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9990/management/add-content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9990",
+					"path": [
+						"management",
+						"add-content"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

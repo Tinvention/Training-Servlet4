@@ -51,11 +51,24 @@
 				<artifactId>wildfly-maven-plugin</artifactId>
 				<version>${org.wildfly.plugin.version}</version>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Logging-Profile>wildfly-training</Logging-Profile>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-	
-	<!--  it is better to have your credentials localy, you can use ~/.m2/settings.xml way -->
-	<!-- Docs here , https://docs.jboss.org/wildfly/plugins/maven/latest/deploy-mojo.html  -->
+
+	<!-- it is better to have your credentials localy, you can use ~/.m2/settings.xml 
+		way -->
+	<!-- Docs here , https://docs.jboss.org/wildfly/plugins/maven/latest/deploy-mojo.html -->
 
 	<profiles>
 		<profile>
@@ -63,7 +76,8 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-			<!-- here we use TCP, to move the war file, it is possbile to use FS copy for local server, setting wildfly home path in conf  -->
+			<!-- here we use TCP, to move the war file, it is possbile to use FS copy 
+				for local server, setting wildfly home path in conf -->
 			<properties>
 				<wildfly.hostname>localhost</wildfly.hostname>
 				<wildfly.port>9990</wildfly.port>
