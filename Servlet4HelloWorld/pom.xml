@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018, Tinvention - Ingegneria Informatica This project includes 
-	software developed by Tinvention - Ingegneria Informatica . http://tinvention.net/ 
-	Licensed under the Apache License, Version 2.0 (the "License"); you may not 
-	use this file except in compliance with the License. You may obtain a copy 
-	of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
-	by applicable law or agreed to in writing, software distributed under the 
-	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
-	OF ANY KIND, either express or implied. See the License for the specific 
-	language governing permissions and limitations under the Licens -->
+<!--
+       Copyright 2018, Tinvention SRL 
+       This project includes software developed by Tinvention SRL  .
+       http://tinvention.net/
+       
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+   
+           http://www.apache.org/licenses/LICENSE-2.0
+   
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License
+       
+ -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -20,8 +29,7 @@
 
 	<packaging>war</packaging>
 
-	<!-- the wildfly plugin give a missing jconsole for my oracle jdk 8 , using 
-		the 9 it is working -->
+	<!-- the wildfly plugin give a missing jconsole for my oracle jdk 8 , using	the 9 it is working -->
 
 	<properties>
 		<org.wildfly.plugin.version>2.0.1.Final</org.wildfly.plugin.version>
@@ -66,8 +74,7 @@
 		</plugins>
 	</build>
 
-	<!-- it is better to have your credentials localy, you can use ~/.m2/settings.xml 
-		way -->
+	<!-- it is better to have your credentials localy, you can use ~/.m2/settings.xml way -->
 	<!-- Docs here , https://docs.jboss.org/wildfly/plugins/maven/latest/deploy-mojo.html -->
 
 	<profiles>
