@@ -39,6 +39,7 @@ public class HelloWorldServlet extends HttpServlet {
     	
     	LOGGER.info("called");
     	LOGGER.fine("called by : " + request.getRemoteHost());
+    	LOGGER.info("session-id: " + request.getSession().getId());
     	
     	// Generate page contents
     	String stringPageTemplate = 
@@ -51,10 +52,11 @@ public class HelloWorldServlet extends HttpServlet {
     			"    	    <p>{0} {3}</p>" + 
     			"    	    </br>" + 
     			"    	    <p>{1} {2} {3}</p>" + 
+    			"    	    <p>sessionID: {4}</p>" +    			
     			"    	</body>" + 
     			"    	</html>";
  
-		String outputBodycontent = MessageFormat.format(stringPageTemplate, "It works", "Hello", "World", "!!"); //it is using the varargs way
+		String outputBodycontent = MessageFormat.format(stringPageTemplate, "It works", "Hello", "World", "!!", request.getSession().getId()); //it is using the varargs way
 
 		//Send contents to browser
 		response.setContentType("text/html");

@@ -32,7 +32,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>HelloWorldServlet</servlet-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
